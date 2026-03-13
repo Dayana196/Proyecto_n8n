@@ -12,7 +12,7 @@ import com.weatherassistant.weather_outfit_assistant.application.dto.WeatherResp
 @Component
 public class N8nWebhookClient {
 
-    private final String url = "https://unretaliated-arrant-sheldon.ngrok-free.dev/webhook-test/91158f36-f2ca-40b7-a6ae-4738f326b6de";
+    private final String url = "https://unretaliated-arrant-sheldon.ngrok-free.dev/webhook-test/fe368372-f3cf-4961-8fe0-223182f64710";
     private final RestTemplate restTemplate = new RestTemplate();
 
     public WeatherResponseDTO sendCity(String city) {

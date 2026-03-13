@@ -6,6 +6,7 @@ import com.weatherassistant.weather_outfit_assistant.application.dto.WeatherRequ
 import com.weatherassistant.weather_outfit_assistant.application.dto.WeatherResponseDTO;
 import com.weatherassistant.weather_outfit_assistant.application.usecase.GetWeatherUseCase;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/weather")
 public class WeatherController {

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WAssist — ¿Qué me pongo hoy?</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Fraunces:ital,wght@0,300;0,700;1,300;1,700&display=swap"
+        rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+
+    <div class="page active" id="homePage">
+
+
+        <nav class="nav">
+            <div class="nav-brand">⛅ WA<span>ssist</span></div>
+            <ul class="nav-links">
+                <li><a href="#como-funciona">Cómo funciona</a></li>
+                <li><a href="#guia-temp">Guía de temperaturas</a></li>
+                <li><a href="#consejos">Consejos</a></li>
+                <li><a href="#consultar" class="nav-cta">Consultar clima →</a></li>
+            </ul>
+        </nav>
+
+
+        <section class="hero" id="consultar">
+            <div class="hero-left">
+                <div class="hero-eyebrow">🌡 Asistente inteligente de vestimenta</div>
+                <h1 class="hero-title">
+                    El clima de hoy,<br>
+                    <em>la ropa correcta</em><br>
+                    para ti.
+                </h1>
+                <p class="hero-body">
+                    Ingresa tu ciudad y te decimos exactamente qué ponerte según la
+                    temperatura actual, las condiciones del clima y la hora del día.
+                </p>
+
+
+                <div class="hero-search-wrap" id="heroSearchWrap">
+                    <div class="hs-label">🏤 ¿En qué ciudad estás?</div>
+                    <div class="hs-row">
+                        <input class="hs-input" id="homeInput" type="text"
+                            placeholder="Escribe el nombre de tu ciudad..." autocomplete="off" />
+                        <button class="hs-btn" onclick="goToWeather()">Ver clima →</button>
+                    </div>
+                    <div class="hs-chips">
+                        <div class="hs-chip" onclick="quickGo('Bogotá')">🇨🇴 Bogotá</div>
+                        <div class="hs-chip" onclick="quickGo('Madrid')">🇪🇸 Madrid</div>
+                        <div class="hs-chip" onclick="quickGo('Buenos Aires')">🇦🇷 Bs Aires</div>
+                        <div class="hs-chip" onclick="quickGo('Lima')">🇵🇪 Lima</div>
+                        <div class="hs-chip" onclick="quickGo('Ciudad de México')">🇲🇽 CDMX</div>
+                        <div class="hs-chip" onclick="quickGo('Miami')">🇺🇸 Miami</div>
+                        <div class="hs-chip" onclick="quickGo('Santiago')">🇨🇱 Santiago</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="hero-right">
+                <div class="weather-illustration">
+                    <div class="wi-circle"></div>
+                    <div class="wi-mini">⛅</div>
+                    <div class="wi-main-icon" id="heroIllIcon">☀️</div>
+                    <div class="wi-temp-badge" id="heroIllTemp">24°</div>
+                    <div class="wi-cond-badge">🌥️ Parcialmente nublado</div>
+                    <div class="wi-outfit-badge">👕 Ropa ligera</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="features-strip">
+            <div class="fs-track">
+
+                <div class="fs-item"><span class="fs-icon">🌞</span> Resultados al instante</div>
+                <div class="fs-item"><span class="fs-icon">🌏</span> Cualquier ciudad del mundo</div>
+                <div class="fs-item"><span class="fs-icon">👖</span> Recomendaciones personalizadas</div>
+                <div class="fs-item"><span class="fs-icon">⏰</span> Pronóstico hora por hora</div>
+                <div class="fs-item"><span class="fs-icon">🌡</span> Temperatura en tiempo real</div>
+                <div class="fs-item"><span class="fs-icon">☂️</span> Alerta de lluvia y tormenta</div>
+                <div class="fs-item"><span class="fs-icon">❄️</span> Detección de nieve y frío extremo</div>
+                <div class="fs-item"><span class="fs-icon">💨</span> Índice de viento y sensación térmica</div>
+
+                <div class="fs-item"><span class="fs-icon">🌞</span> Resultados al instante</div>
+                <div class="fs-item"><span class="fs-icon">🌏</span> Cualquier ciudad del mundo</div>
+                <div class="fs-item"><span class="fs-icon">👖</span> Recomendaciones personalizadas</div>
+                <div class="fs-item"><span class="fs-icon">⏰</span> Pronóstico hora por hora</div>
+                <div class="fs-item"><span class="fs-icon">🌡</span> Temperatura en tiempo real</div>
+                <div class="fs-item"><span class="fs-icon">☂️</span> Alerta de lluvia y tormenta</div>
+                <div class="fs-item"><span class="fs-icon">❄️</span> Detección de nieve y frío extremo</div>
+                <div class="fs-item"><span class="fs-icon">💨</span> Índice de viento y sensación térmica</div>
+            </div>
+        </div>
+
+
+        <section class="section" id="como-funciona">
+            <div class="section-header">
+                <div class="section-tag">Cómo funciona</div>
+                <h2 class="section-title">Simple, rápido y <em>útil</em></h2>
+                <p class="section-sub">En tres pasos sabrás exactamente qué ponerte antes de salir.</p>
+            </div>
+            <div class="steps">
+                <div class="step-card">
+                    <div class="step-connector"></div>
+                    <div class="step-num">01</div>
+                    <div class="step-icon">🔍</div>
+                    <div class="step-title">Escribe tu ciudad</div>
+                    <div class="step-body">Ingresa el nombre de cualquier ciudad del mundo. No necesitas registrarte ni
+                        configurar nada.</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-connector"></div>
+                    <div class="step-num">02</div>
+                    <div class="step-icon">🌡️</div>
+                    <div class="step-title">Obtenemos el clima</div>
+                    <div class="step-body">Consultamos temperatura, condición climática, humedad, viento y probabilidad
+                        de lluvia en tiempo real.</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <div class="step-icon">👕</div>
+                    <div class="step-title">Recibe tu recomendación</div>
+                    <div class="step-body">Te decimos exactamente qué prendas usar ese día según la temperatura y
+                        condiciones del clima.</div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider" />
+
+
+        <section class="section" id="guia-temp">
+            <div class="temp-guide">
+                <div class="section-header" style="margin-bottom:0">
+                    <div class="section-tag section-tag--white">Guía de temperaturas</div>
+                    <h2 class="section-title section-title--white" style="margin-top:12px">
+                        ¿Qué usar según <em class="em-ice">la temperatura?</em>
+                    </h2>
+                    <p class="section-sub section-sub--white">Nuestra guía cubre desde el frío extremo hasta el calor
+                        intenso.</p>
+                </div>
+                <div class="tg-grid">
+                    <div class="tg-card">
+                        <div class="tg-icon">🥶</div>
+                        <div class="tg-range">Menos de 5°C</div>
+                        <div class="tg-outfit">Abrigo muy grueso · Ropa térmica · Guantes · Bufanda · Botas</div>
+                    </div>
+                    <div class="tg-card">
+                        <div class="tg-icon">🧥</div>
+                        <div class="tg-range">5°C – 15°C</div>
+                        <div class="tg-outfit">Abrigo o chaqueta gruesa · Pantalón largo · Zapatos cerrados</div>
+                    </div>
+                    <div class="tg-card">
+                        <div class="tg-icon">🧣</div>
+                        <div class="tg-range">15°C – 20°C</div>
+                        <div class="tg-outfit">Suéter o chaqueta ligera · Jean · Tenis · Capa extra opcional</div>
+                    </div>
+                    <div class="tg-card">
+                        <div class="tg-icon">👕</div>
+                        <div class="tg-range">20°C – 28°C</div>
+                        <div class="tg-outfit">Camiseta o blusa · Jean ligero · Tenis · Gafas de sol</div>
+                    </div>
+                    <div class="tg-card">
+                        <div class="tg-icon">🌞</div>
+                        <div class="tg-range">Más de 28°C</div>
+                        <div class="tg-outfit">Ropa muy ligera · Shorts · Protector solar · Hidratación</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section class="section" style="padding-top:0">
+            <div class="cta-banner">
+                <div>
+                    <div class="cb-title">¿Listo para consultar<br>el clima de tu ciudad?</div>
+                    <div class="cb-sub">Ingresa tu ciudad ahora y en segundos sabrás exactamente qué ponerte hoy.</div>
+                </div>
+                <button class="cb-btn" onclick="scrollToSearch()">Consultar ahora →</button>
+            </div>
+        </section>
+
+        <footer>
+            <strong>ClimaVest</strong>
+            <span class="footer-team">Dayana Barbosa · Cristian Mayorga · Diego Díaz</span>
+        </footer>
+
+    </div>
+
+
+    <div class="page" id="weatherPage">
+
+        <nav class="wp-nav">
+            <button class="wp-back" onclick="goHome()">← Volver</button>
+            <div class="wp-search-mini">
+                <input class="wp-input-mini" id="wpInput" type="text" placeholder="Buscar otra ciudad..."
+                    autocomplete="off" />
+                <button class="wp-btn-mini" onclick="searchFromWeatherPage()">Buscar</button>
+            </div>
+        </nav>
+
+        <div class="wp-body" id="wpBody"></div>
+
+    </div>
+
+
+    <div class="wp-loader" id="loader">
+        <div class="spin"></div>
+        <div class="spin-label">Consultando el clima...</div>
+    </div>
+
+
+    <div class="toast" id="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
