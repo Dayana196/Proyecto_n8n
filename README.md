@@ -106,12 +106,9 @@ weather-outfit-assistant/
 ---
 
 ## 👥 Equipo
-
-| Integrante 
-|-----------|-----|
-| Dayana Barbosa 
-| Cristian Mayorga 
-| Diego Díaz 
+- Dayana Barbosa 
+- Cristian Mayorga 
+- Diego Díaz 
 
 ---
 
